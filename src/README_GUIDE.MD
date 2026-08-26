@@ -14,3 +14,4 @@ para correr el server backend my-medusa-store> npm run dev
 login en backend :localhost:9000/app :  en el form : admin@medusa-test.com y supersecret ( enter por default)
 api_key esta en localhost:9000 en settings  
 para iniciar  el server frontend > my-medusa-store>my-medusa-storefront> npm run dev .. da error por lo pnpm..  y el viernes 21 ago 2pm lo inicie asi : my-medusa-storefront> pnpm storefront:dev  y localhost:8000
+render paraguardar el backend cuando deploy en vercel 
