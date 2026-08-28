@@ -1,19 +1,29 @@
-FROM node:18-alpine AS base
+# Use Node.js 20 to match the project's requirements
+FROM node:20
+
+# Set the working directory inside the container
 WORKDIR /app
 
-FROM base AS deps
+# Copy package files from the current directory (which is /backend)
 COPY package.json package-lock.json* ./
-RUN npm install --omit=dev
 
-FROM base AS builder
-COPY --from=deps /app/node_modules ./node_modules
+# Install ALL dependencies
+RUN npm install
+
+# Copy the rest of the source code from the current directory
 COPY . .
+
+# Make the startup script executable
+RUN chmod +x ./start.sh
+
+# Run the build command for the server only
 RUN npm run build
 
-FROM base AS production
+# Set the environment to production for the runtime
 ENV NODE_ENV=production
-COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/package.json ./package.json
-COPY --from=deps /app/node_modules ./node_modules
+
+# Expose the port the app will run on
 EXPOSE 9000
-CMD ["npm", "run", "start"]
+
+# The command to start the application using our custom Node.js script
+CMD ["sh", "./start.sh"]
