@@ -33,4 +33,3 @@ powershell -Command "[Convert]::ToBase64String((1..32 | ForEach-Object {Get-Rand
 y otra vez devuelve otro token, esperar 1 minute mientras lo crea,
 1oCp0kRQ+IwsGj8TDhUgPAdnPRTr+jlL4y8cgy6fQnE=   listo !
 y esta es la url que da render
-https://my-medusa-store-hhzn.onrender.com
