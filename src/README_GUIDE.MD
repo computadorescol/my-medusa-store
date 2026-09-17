@@ -32,4 +32,14 @@ y para obtener el COOKIE_SECRET pegar mismo script
 powershell -Command "[Convert]::ToBase64String((1..32 | ForEach-Object {Get-Random -Maximum 256}))"
 y otra vez devuelve otro token, esperar 1 minute mientras lo crea,
 1oCp0kRQ+IwsGj8TDhUgPAdnPRTr+jlL4y8cgy6fQnE=   listo !
-y esta es la url que da render
+y esta es la url que da render  fe45-bl- .onrerder.com
+para copiar una carpeta a otra destination: usando Powershell.
+Copy-Item `
+  -Path "C:\ruta\origen\apps" `
+  -Destination "C:\Users\Pilaresco\Documents\my-medusa-store" `
+  -Recurse `
+  -Force
+  -WhatIf
+  y para reversar si no me gusto o no quedo bien usar git restore . ( con el punto al final)
+  y robocopy con CMD.
+  docker. el WORKDIR   es clave para que docker ejecute .

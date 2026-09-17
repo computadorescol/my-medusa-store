@@ -1,6 +1,6 @@
 # ---- Base Stage ----
 FROM node:18-alpine AS base
-WORKDIR /app
+WORKDIR /app/my-medusa-storefront/apps/backend
 
 # ---- Dependencies Stage ----
 FROM base AS deps
