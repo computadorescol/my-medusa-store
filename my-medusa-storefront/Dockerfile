@@ -20,8 +20,8 @@ FROM base AS production
 ENV NODE_ENV=production
 
 # Copy built files and production node_modules
-COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/my-medusa-storefront/apps/backend/.medusa ./
+COPY --from=builder /app/my-medusa-storefront/apps/backend/package.json ./package.json
 COPY --from=deps /app/node_modules ./node_modules
 
 # Expose the port the app runs on
