@@ -25,6 +25,7 @@ COPY --from=builder /app/my-medusa-storefront/apps/backend/package.json ./packag
 COPY --from=deps /app/node_modules ./node_modules
 
 # Expose the port the app runs on
+WORKDIR /app/.medusa/server
 EXPOSE 9000
 
 # Command to run the Medusa server
