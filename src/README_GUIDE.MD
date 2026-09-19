@@ -32,7 +32,19 @@ y para obtener el COOKIE_SECRET pegar mismo script
 powershell -Command "[Convert]::ToBase64String((1..32 | ForEach-Object {Get-Random -Maximum 256}))"
 y otra vez devuelve otro token, esperar 1 minute mientras lo crea,
 1oCp0kRQ+IwsGj8TDhUgPAdnPRTr+jlL4y8cgy6fQnE=   listo !
-y esta es la url que da render  fe45-bl- .onrerder.com
+y esta es la url que da render  fe45-bl- .onrenrder.com
+este link es de las environments que descargue desde render.com
+blob:https://dashboard.render.com/6bf0f405-0d55-44f4-a39a-e3a3b3e2a44f
+********  environments ************* nota : se puede exportar el file. lo que hice fue asi de my-medusa.store_2 exporte el file y lo guarde en descargas . luego em my-medusa-store_3 lo importe y en un segundo copio todas la  environments. bien.
+COOKIE_SECRET="1oCp0kRQ+IwsGj8TDhUgPAdnPRTr+jlL4y8cgy6fQnE="
+DATABASE_URL=postgresql://medusajs_ntfz_user:XvRPxZ3T4zyXaU2kANPbDWD6Nsl2HfOA@dpg-da7oltpsrm7s739qtnog-a/medusajs_ntfz
+JWT_SECRET="QeLCX26oBjrfLOBTVATcX75uSbwiD70pOOP4zS2QRjk="
+NODE_ENV=production
+NODE_VERSION=22.12.0
+REDIS_URL='redis-cli --tls -u redis://default:gQAAAAAAAs7xAAIgcDFlZDVlMDhiNjY4OTI0NDAwOGRiMTJiODVhNDhlOGU1MA@secure-lizard-184049.upstash.io:6379
+UPSTASH_REDIS_REST_URL="https://secure-lizard-184049.upstash.io"
+UPSTASH_REDIS_REST_TOKEN="gQAAAAAAAs7xAAIgcDFlZDVlMDhiNjY4OTI0NDAwOGRiMTJiODVhNDhlOGU1MA"'
+*********************************
 para copiar una carpeta a otra destination: usando Powershell.
 Copy-Item `
   -Path "C:\ruta\origen\apps" `
