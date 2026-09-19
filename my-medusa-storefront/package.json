@@ -2,7 +2,7 @@
   "name": "my-medusa-storefront",
   "private": false,
   "packageManager": "pnpm@9.15.0",
-  ;
+  
   "engines": {
     "node": "^20.19.0 || >=22.12.0"
   },

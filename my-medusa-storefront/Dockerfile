@@ -12,6 +12,7 @@ FROM base AS builder
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 # Build the Medusa project for production
+WORKDIR /app/my-medusa-storefront/apps/backend
 RUN npm run build
 
 # ---- Production Stage ----
