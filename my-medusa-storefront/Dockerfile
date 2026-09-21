@@ -1,53 +1,46 @@
 # ---- Base ----
-FROM node:18-alpine AS base
+FROM node:20-alpine AS base
 
 WORKDIR /app
 
-# Habilita pnpm incluido con Node mediante Corepack
-RUN corepack enable
 
-
-# ---- Dependencias para compilar ----
+# ---- Dependencias de compilación ----
 FROM base AS deps
 
-# Las rutas parten de la raíz del repositorio porque Root Directory está vacío.
-COPY my-medusa-storefront/package.json ./
-COPY my-medusa-storefront/pnpm-lock.yaml ./
-COPY my-medusa-storefront/pnpm-workspace.yaml ./
+# El contexto sigue siendo la raíz del repositorio.
+# El Dockerfile está en my-medusa-storefront/, pero COPY parte de la raíz.
+COPY package.json package-lock.json* ./
+COPY my-medusa-storefront/package.json ./my-medusa-storefront/package.json
+COPY my-medusa-storefront/apps/backend/package.json ./my-medusa-storefront/apps/backend/package.json
 
-# Se necesitan dependencias de desarrollo para turbo, TypeScript y medusa build.
-RUN pnpm install --frozen-lockfile
+RUN npm install
 
 
-# ---- Compilación ----
+# ---- Build ----
 FROM base AS builder
 
 COPY --from=deps /app/node_modules ./node_modules
-COPY my-medusa-storefront/ ./
+COPY . .
 
-WORKDIR /app/apps/backend
+WORKDIR /app/my-medusa-storefront/apps/backend
 
-# Genera el build autónomo en .medusa/server
-RUN pnpm run build
+# El packageManager del backend solicita npm
+RUN npm run build
 
 
-# ---- Imagen de producción ----
-FROM node:18-alpine AS production
+# ---- Producción ----
+FROM node:20-alpine AS production
 
 WORKDIR /app
 
 ENV NODE_ENV=production
 
-# Habilita pnpm también en la imagen final
-RUN corepack enable
+# Copia el servidor autónomo producido por medusa build
+COPY --from=builder /app/my-medusa-storefront/apps/backend/.medusa/server ./
 
-# Copia exclusivamente el servidor compilado de Medusa.
-COPY --from=builder /app/apps/backend/.medusa/server ./
-
-# Instala dependencias de ejecución del build generado.
-RUN pnpm install --prod --frozen-lockfile
+# Instala únicamente dependencias de producción del build generado
+RUN npm install --omit=dev
 
 EXPOSE 9000
 
-# Arranca el build de producción, no el código TypeScript fuente.
-CMD ["pnpm", "exec", "medusa", "start"]
+CMD ["npx", "medusa", "start"]
