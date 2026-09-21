@@ -370,17 +370,18 @@ export default async function initial_data_seed({
             },
           ],
           options: [
-            { id: sizeOption.id },
-            { id: colorOption.id },
-          ],
-          variants: [
-            {
-              title: "S / Black",
-              sku: "SHIRT-S-BLACK",
-              options: {
-                Size: "S",
-                Color: "Black",
-              },
+  {
+    title: "Size",
+    values: ["S", "M", "L"],
+  },
+],
+variants: [
+  {
+    title: "S",
+    sku: "SWEATSHIRT-S",
+    options: {
+      Size: "S",
+    },
               prices: [
                 {
                   amount: 10,
@@ -645,14 +646,19 @@ variants: [
               url: "https://medusa-public-images.s3.eu-west-1.amazonaws.com/sweatpants-gray-back.png",
             },
           ],
-          options: [{ id: sizeOption.id }],
-          variants: [
-            {
-              title: "S",
-              sku: "SWEATPANTS-S",
-              options: {
-                Size: "S",
-              },
+          options: [
+  {
+    title: "Size",
+    values: ["S", "M", "L"],
+  },
+],
+variants: [
+  {
+    title: "S",
+    sku: "SWEATSHIRT-S",
+    options: {
+      Size: "S",
+    },
               prices: [
                 {
                   amount: 10,
@@ -741,14 +747,19 @@ variants: [
               url: "https://medusa-public-images.s3.eu-west-1.amazonaws.com/shorts-vintage-back.png",
             },
           ],
-          options: [{ id: sizeOption.id }],
-          variants: [
-            {
-              title: "S",
-              sku: "SHORTS-S",
-              options: {
-                Size: "S",
-              },
+          options: [
+  {
+    title: "Size",
+    values: ["S", "M", "L"],
+  },
+],
+variants: [
+  {
+    title: "S",
+    sku: "SWEATSHIRT-S",
+    options: {
+      Size: "S",
+    },
               prices: [
                 {
                   amount: 10,
