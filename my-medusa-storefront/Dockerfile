@@ -1,32 +1,35 @@
-# ---- Base Stage ----
+# ---- Base ----
 FROM node:18-alpine AS base
-WORKDIR /app   
+WORKDIR /app
 
-# ---- Dependencies Stage ----
+# ---- Dependencias para compilar ----
 FROM base AS deps
-COPY package.json package-lock.json* ./
-RUN npm install --omit=dev
+COPY package.json package-lock.json ./
+RUN npm ci
 
-# ---- Build Stage ----
+# ---- Build de Medusa ----
 FROM base AS builder
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-# Build the Medusa project for production
+
 WORKDIR /app/my-medusa-storefront/apps/backend
+
 RUN npm run build
 
-# ---- Production Stage ----
-FROM base AS production
+# ---- Imagen de producción ----
+FROM node:18-alpine AS production
+WORKDIR /app
+
 ENV NODE_ENV=production
 
-# Copy built files and production node_modules
-COPY --from=builder /app/.medusa ./.medusa
-COPY --from=builder /app/package.json ./package.json
-COPY --from=deps /app/node_modules ./node_modules
+# Copia el resultado compilado de Medusa
+COPY --from=builder /app/my-medusa-storefront/apps/backend/.medusa ./.medusa
 
-# Expose the port the app runs on
+# Medusa requiere instalar las dependencias del build generado
 WORKDIR /app/.medusa/server
+
+RUN npm install --omit=dev
+
 EXPOSE 9000
 
-# Command to run the Medusa server
-CMD ["npm", "run", "start"]
+CMD ["npx", "medusa", "start"]
