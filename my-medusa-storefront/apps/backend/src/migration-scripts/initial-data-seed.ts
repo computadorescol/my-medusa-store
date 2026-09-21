@@ -544,14 +544,19 @@ export default async function initial_data_seed({
               url: "https://medusa-public-images.s3.eu-west-1.amazonaws.com/sweatshirt-vintage-back.png",
             },
           ],
-          options: [{ id: sizeOption.id }],
-          variants: [
-            {
-              title: "S",
-              sku: "SWEATSHIRT-S",
-              options: {
-                Size: "S",
-              },
+          options: [
+  {
+    title: "Size",
+    values: ["S", "M", "L"],
+  },
+],
+variants: [
+  {
+    title: "S",
+    sku: "SWEATSHIRT-S",
+    options: {
+      Size: "S",
+    },
               prices: [
                 {
                   amount: 10,
