@@ -47,3 +47,4 @@ UPSTASH_REDIS_REST_TOKEN="gQAAAAAAAs7xAAIgcDFlZDVlMDhiNjY4OTI0NDAwOGRiMTJiODVhND
 *********************************
 FRAMEWORK :nextjs ver package.json de storefront linea 4 
   docker. el WORKDIR   es clave para que docker ejecute .
+    
