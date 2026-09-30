@@ -13,6 +13,7 @@ my-medusa-store > yarn medusa user -e admin@medusa-test.com -p supersecret
 para correr el server backend my-medusa-store> npm run dev y depronto tuve que correr db:migrate y luego si npm run dev .
 login en backend :localhost:9000/app :  en el form : admin@medusa-test.com y supersecret ( enter por default)
 api_key esta en localhost:9000 en settings  
+PUBLISHABLE_API_KEY pk_3003f295e9f7b92abe6b3242c873848c8dc34326ff1fe6b06e010eb42c1c0149    
 para iniciar  el server frontend > my-medusa-store>my-medusa-storefront> npm run dev .. da error por lo pnpm..  y el viernes 21 ago 2pm lo inicie asi : my-medusa-storefront> pnpm storefront:dev  y localhost:8000
 render para guardar el backend cuando deploy en vercel 
 backend> Dockerfile es para el render
@@ -47,4 +48,5 @@ UPSTASH_REDIS_REST_TOKEN="gQAAAAAAAs7xAAIgcDFlZDVlMDhiNjY4OTI0NDAwOGRiMTJiODVhND
 *********************************
 FRAMEWORK :nextjs ver package.json de storefront linea 4 
   docker. el WORKDIR   es clave para que docker ejecute .
+    
     
