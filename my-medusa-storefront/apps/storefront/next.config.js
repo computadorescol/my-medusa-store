@@ -21,6 +21,16 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "@lib": path.resolve(__dirname, "src/lib"),
+      "@modules": path.resolve(__dirname, "src/modules"),
+      "@pages": path.resolve(__dirname, "src/pages"),
+    }
+    return config
+  }
+  ,
   typescript: {
     ignoreBuildErrors: true,
   },
