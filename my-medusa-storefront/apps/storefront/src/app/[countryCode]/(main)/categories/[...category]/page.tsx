@@ -7,7 +7,8 @@ import { HttpTypes, StoreRegion } from "@medusajs/types"
 import CategoryTemplate from "@modules/categories/templates"
 import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 import { parseOptionValueIds } from "@lib/util/product-option-filters"
-
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 type Props = {
   params: Promise<{ category: string[]; countryCode: string }>
   searchParams: Promise<
