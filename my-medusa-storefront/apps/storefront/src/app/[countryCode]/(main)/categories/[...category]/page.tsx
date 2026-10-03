@@ -1,5 +1,3 @@
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
 import { Metadata } from "next"
 import { notFound } from "next/navigation"
 
