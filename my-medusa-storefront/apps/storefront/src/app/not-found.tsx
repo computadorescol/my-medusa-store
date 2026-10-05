@@ -1,6 +1,6 @@
  
 import { ArrowUpRightMini } from "@medusajs/icons"
-import { Text } from "@modules/common/components/ui"
+import { Text } from "@medusa/ui"
 import { Metadata } from "next"
 import Link from "next/link"
 export const dynamic = 'force-dynamic'
