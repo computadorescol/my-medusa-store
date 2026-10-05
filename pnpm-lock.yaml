@@ -212,8 +212,8 @@ importers:
         specifier: ^0.0.1
         version: 0.0.1
       tailwindcss-radix:
-        specifier: ^2.8.0
-        version: 2.9.0
+        specifier: ^4.0.2
+        version: 4.0.2(tailwindcss@3.4.19(yaml@2.9.1))
     devDependencies:
       '@babel/core':
         specifier: ^7.17.5
@@ -8457,8 +8457,11 @@ packages:
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
 
-  tailwindcss-radix@2.9.0:
-    resolution: {integrity: sha512-N49SnciSeRgLC+VK+Fu5VULNJIvJUvN7tUKF1kEHPXrS76WAlwrSVthCbJ9NUw0Cj/ptxs73pdVEdosomAN5Lg==}
+  tailwindcss-radix@4.0.2:
+    resolution: {integrity: sha512-Uoa2BUCfWKGCjQPXbj4X4Q4EWAeCsvhj0udn0IupeNcvuLbqRXvC5+bKAqsngIne5mrRUPTy/IqMXGh81YyrCA==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      tailwindcss: ^3.0 || ^4.0
 
   tailwindcss@3.4.19:
     resolution: {integrity: sha512-3ofp+LL8E+pK/JuPLPggVAIaEuhvIz4qNcf3nA1Xn2o/7fb7s/TYpHhwGDv1ZU3PkBluUVaF8PyCHcm48cKLWQ==}
@@ -18991,7 +18994,9 @@ snapshots:
     dependencies:
       tailwindcss: 3.4.19(yaml@2.9.1)
 
-  tailwindcss-radix@2.9.0: {}
+  tailwindcss-radix@4.0.2(tailwindcss@3.4.19(yaml@2.9.1)):
+    dependencies:
+      tailwindcss: 3.4.19(yaml@2.9.1)
 
   tailwindcss@3.4.19(yaml@2.9.1):
     dependencies:
