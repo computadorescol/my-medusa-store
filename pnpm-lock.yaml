@@ -195,7 +195,7 @@ importers:
         version: 15.5.21(@babel/core@7.29.7(supports-color@8.1.1))(@opentelemetry/api@1.9.1)(react-dom@19.0.5(react@19.0.5))(react@19.0.5)
       pg:
         specifier: ^8.11.3
-        version: 8.23.0
+        version: 8.23.1
       qs:
         specifier: ^6.12.1
         version: 6.16.0
@@ -7569,8 +7569,14 @@ packages:
   pg-cloudflare@1.4.0:
     resolution: {integrity: sha512-Vo7z/6rrQYxpNRylp4Tlob2elzbh+N/MOQbxFVWCxS7oEx6jF53GTJFxK2WWpKuBRkmiin4Mt+xofFDjx09R0A==}
 
+  pg-cloudflare@1.4.1:
+    resolution: {integrity: sha512-6PQbsFWZcp9EmJEwy5cGQ2La+AMWpP46lgbb8X+U/XsHIUweYDNCpeuKck5RxL2MdVFi7krbbEi5nX4Zh7JhrQ==}
+
   pg-connection-string@2.14.0:
     resolution: {integrity: sha512-XwWDGcLRGCXAR8F/AM5bG7Q+A3Wm2s6QeEjlOKZLlH3UYcguiqCWKyWXVag5TLTIjR7oOJUY8kcADaZgWPyLeg==}
+
+  pg-connection-string@2.14.1:
+    resolution: {integrity: sha512-qR3kGNPBLpCNtz0evbKA0Y/MRFXwSSdT+pTJvYp/bXTcReZbvX1kzF0IyTc1QnxqF7AZbOeBhNL8R5mYQZV/MA==}
 
   pg-connection-string@2.6.2:
     resolution: {integrity: sha512-ch6OwaeaPYcova4kKZ15sbJ2hKb/VP48ZD2gE7i1J+L4MspCtBMAx8nMgz7bksc7IojCIIWuEhHibSMFH8m8oA==}
@@ -7591,6 +7597,9 @@ packages:
 
   pg-protocol@1.16.0:
     resolution: {integrity: sha512-sILXutLVjCLjcDuOmvhX5e2Z4cS5qG/6Bu3VkpFwdf/633ElGLpEh9bgmuI5I4sqKqkifQiGyiCcx1HdtrK7tg==}
+
+  pg-protocol@1.16.1:
+    resolution: {integrity: sha512-p9VOFMiHB/ZbJATetbg+99PxssTVSQRnyuPSQ67mN1+1KBOjZaZ83ZQzltnxPhJwSsC3nwVjJ10DVJlerbFzLg==}
 
   pg-types@2.2.0:
     resolution: {integrity: sha512-qTAAlrEsl8s4OiEQY69wDvcMIdQN6wdz5ojQiOy6YRMuynxenON0O5oCpJI6lshc6scgAY8qvJ2On/p+CXY0GA==}
@@ -7614,8 +7623,8 @@ packages:
       pg-native:
         optional: true
 
-  pg@8.23.0:
-    resolution: {integrity: sha512-Ip2EQCngowJLGOfCwkFhPXU7/ljlhn6Rxlmy4XYfL2Y+vyRM59+8uR2xqRWKdYmbXmxCFOAmKxBuSUCdF34qLg==}
+  pg@8.23.1:
+    resolution: {integrity: sha512-aL96AHANtWjPLDOLqnhx+ngp9+UK7ETEU8VJrDCGvsSSi/mGLcWYsS6Herg7lmaBJe4uwrfqsa7gTEFaSizDoQ==}
     engines: {node: '>= 16.0.0'}
     peerDependencies:
       pg-native: '>=3.0.1'
@@ -10930,10 +10939,10 @@ snapshots:
 
   '@medusajs/deps@2.13.1(@types/node@20.19.43)(supports-color@8.1.1)':
     dependencies:
-      '@mikro-orm/cli': 6.4.16(pg@8.23.0)(supports-color@8.1.1)
+      '@mikro-orm/cli': 6.4.16(pg@8.23.1)(supports-color@8.1.1)
       '@mikro-orm/core': 6.4.16
-      '@mikro-orm/knex': 6.4.16(@mikro-orm/core@6.4.16)(pg@8.23.0)(supports-color@8.1.1)
-      '@mikro-orm/migrations': 6.4.16(@mikro-orm/core@6.4.16)(@types/node@20.19.43)(pg@8.23.0)(supports-color@8.1.1)
+      '@mikro-orm/knex': 6.4.16(@mikro-orm/core@6.4.16)(pg@8.23.1)(supports-color@8.1.1)
+      '@mikro-orm/migrations': 6.4.16(@mikro-orm/core@6.4.16)(@types/node@20.19.43)(pg@8.23.1)(supports-color@8.1.1)
       '@mikro-orm/postgresql': 6.4.16(@mikro-orm/core@6.4.16)(supports-color@8.1.1)
       '@opentelemetry/api': 1.9.1
       '@opentelemetry/instrumentation-pg': 0.52.0(@opentelemetry/api@1.9.1)(supports-color@8.1.1)
@@ -10941,7 +10950,7 @@ snapshots:
       '@opentelemetry/sdk-node': 0.200.0(@opentelemetry/api@1.9.1)(supports-color@8.1.1)
       '@opentelemetry/sdk-trace-node': 2.11.0(@opentelemetry/api@1.9.1)
       awilix: 8.0.1
-      pg: 8.23.0
+      pg: 8.23.1
       zod: 3.25.76
     transitivePeerDependencies:
       - '@types/node'
@@ -10957,10 +10966,10 @@ snapshots:
 
   '@medusajs/deps@2.19.0(@types/node@20.19.43)(supports-color@8.1.1)':
     dependencies:
-      '@mikro-orm/cli': 6.6.14(pg@8.23.0)(supports-color@8.1.1)
+      '@mikro-orm/cli': 6.6.14(pg@8.23.1)(supports-color@8.1.1)
       '@mikro-orm/core': 6.6.14
-      '@mikro-orm/knex': 6.6.14(@mikro-orm/core@6.6.14)(pg@8.23.0)(supports-color@8.1.1)
-      '@mikro-orm/migrations': 6.6.14(@mikro-orm/core@6.6.14)(@types/node@20.19.43)(pg@8.23.0)(supports-color@8.1.1)
+      '@mikro-orm/knex': 6.6.14(@mikro-orm/core@6.6.14)(pg@8.23.1)(supports-color@8.1.1)
+      '@mikro-orm/migrations': 6.6.14(@mikro-orm/core@6.6.14)(@types/node@20.19.43)(pg@8.23.1)(supports-color@8.1.1)
       '@mikro-orm/postgresql': 6.6.14(@mikro-orm/core@6.6.14)(supports-color@8.1.1)
       '@opentelemetry/api': 1.9.1
       '@opentelemetry/instrumentation-pg': 0.52.0(@opentelemetry/api@1.9.1)(supports-color@8.1.1)
@@ -10968,7 +10977,7 @@ snapshots:
       '@opentelemetry/sdk-node': 0.220.0(@opentelemetry/api@1.9.1)(supports-color@8.1.1)
       '@opentelemetry/sdk-trace-node': 2.11.0(@opentelemetry/api@1.9.1)
       awilix: 8.0.1
-      pg: 8.23.0
+      pg: 8.23.1
       zod: 4.2.0
     transitivePeerDependencies:
       - '@types/node'
@@ -12070,11 +12079,11 @@ snapshots:
       - supports-color
       - tedious
 
-  '@mikro-orm/cli@6.4.16(pg@8.23.0)(supports-color@8.1.1)':
+  '@mikro-orm/cli@6.4.16(pg@8.23.1)(supports-color@8.1.1)':
     dependencies:
       '@jercle/yargonaut': 1.1.5
       '@mikro-orm/core': 6.4.16
-      '@mikro-orm/knex': 6.4.16(@mikro-orm/core@6.4.16)(pg@8.23.0)(supports-color@8.1.1)
+      '@mikro-orm/knex': 6.4.16(@mikro-orm/core@6.4.16)(pg@8.23.1)(supports-color@8.1.1)
       fs-extra: 11.3.0
       tsconfig-paths: 4.2.0
       yargs: 17.7.2
@@ -12090,11 +12099,11 @@ snapshots:
       - supports-color
       - tedious
 
-  '@mikro-orm/cli@6.6.14(pg@8.23.0)(supports-color@8.1.1)':
+  '@mikro-orm/cli@6.6.14(pg@8.23.1)(supports-color@8.1.1)':
     dependencies:
       '@jercle/yargonaut': 1.1.5
       '@mikro-orm/core': 6.6.14
-      '@mikro-orm/knex': 6.6.14(@mikro-orm/core@6.6.14)(pg@8.23.0)(supports-color@8.1.1)
+      '@mikro-orm/knex': 6.6.14(@mikro-orm/core@6.6.14)(pg@8.23.1)(supports-color@8.1.1)
       fs-extra: 11.3.3
       tsconfig-paths: 4.2.0
       yargs: 17.7.2
@@ -12146,11 +12155,11 @@ snapshots:
       - supports-color
       - tedious
 
-  '@mikro-orm/knex@6.4.16(@mikro-orm/core@6.4.16)(pg@8.23.0)(supports-color@8.1.1)':
+  '@mikro-orm/knex@6.4.16(@mikro-orm/core@6.4.16)(pg@8.23.1)(supports-color@8.1.1)':
     dependencies:
       '@mikro-orm/core': 6.4.16
       fs-extra: 11.3.0
-      knex: 3.1.0(pg@8.23.0)(supports-color@8.1.1)
+      knex: 3.1.0(pg@8.23.1)(supports-color@8.1.1)
       sqlstring: 2.3.3
     transitivePeerDependencies:
       - mysql
@@ -12177,11 +12186,11 @@ snapshots:
       - supports-color
       - tedious
 
-  '@mikro-orm/knex@6.6.14(@mikro-orm/core@6.6.14)(pg@8.23.0)(supports-color@8.1.1)':
+  '@mikro-orm/knex@6.6.14(@mikro-orm/core@6.6.14)(pg@8.23.1)(supports-color@8.1.1)':
     dependencies:
       '@mikro-orm/core': 6.6.14
       fs-extra: 11.3.3
-      knex: 3.2.10(pg@8.23.0)(supports-color@8.1.1)
+      knex: 3.2.10(pg@8.23.1)(supports-color@8.1.1)
       sqlstring: 2.3.3
     transitivePeerDependencies:
       - mysql
@@ -12193,10 +12202,10 @@ snapshots:
       - supports-color
       - tedious
 
-  '@mikro-orm/migrations@6.4.16(@mikro-orm/core@6.4.16)(@types/node@20.19.43)(pg@8.23.0)(supports-color@8.1.1)':
+  '@mikro-orm/migrations@6.4.16(@mikro-orm/core@6.4.16)(@types/node@20.19.43)(pg@8.23.1)(supports-color@8.1.1)':
     dependencies:
       '@mikro-orm/core': 6.4.16
-      '@mikro-orm/knex': 6.4.16(@mikro-orm/core@6.4.16)(pg@8.23.0)(supports-color@8.1.1)
+      '@mikro-orm/knex': 6.4.16(@mikro-orm/core@6.4.16)(pg@8.23.1)(supports-color@8.1.1)
       fs-extra: 11.3.0
       umzug: 3.8.2(@types/node@20.19.43)
     transitivePeerDependencies:
@@ -12212,10 +12221,10 @@ snapshots:
       - supports-color
       - tedious
 
-  '@mikro-orm/migrations@6.6.14(@mikro-orm/core@6.6.14)(@types/node@20.19.43)(pg@8.23.0)(supports-color@8.1.1)':
+  '@mikro-orm/migrations@6.6.14(@mikro-orm/core@6.6.14)(@types/node@20.19.43)(pg@8.23.1)(supports-color@8.1.1)':
     dependencies:
       '@mikro-orm/core': 6.6.14
-      '@mikro-orm/knex': 6.6.14(@mikro-orm/core@6.6.14)(pg@8.23.0)(supports-color@8.1.1)
+      '@mikro-orm/knex': 6.6.14(@mikro-orm/core@6.6.14)(pg@8.23.1)(supports-color@8.1.1)
       fs-extra: 11.3.3
       umzug: 3.8.2(@types/node@20.19.43)
     transitivePeerDependencies:
@@ -17344,7 +17353,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  knex@3.1.0(pg@8.23.0)(supports-color@8.1.1):
+  knex@3.1.0(pg@8.23.1)(supports-color@8.1.1):
     dependencies:
       colorette: 2.0.19
       commander: 10.0.1
@@ -17361,7 +17370,7 @@ snapshots:
       tarn: 3.1.2
       tildify: 2.0.0
     optionalDependencies:
-      pg: 8.23.0
+      pg: 8.23.1
     transitivePeerDependencies:
       - supports-color
 
@@ -17386,7 +17395,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  knex@3.2.10(pg@8.23.0)(supports-color@8.1.1):
+  knex@3.2.10(pg@8.23.1)(supports-color@8.1.1):
     dependencies:
       colorette: 2.0.19
       commander: 10.0.1
@@ -17403,7 +17412,7 @@ snapshots:
       tarn: 3.1.2
       tildify: 2.0.0
     optionalDependencies:
-      pg: 8.23.0
+      pg: 8.23.1
     transitivePeerDependencies:
       - supports-color
 
@@ -17962,7 +17971,12 @@ snapshots:
   pg-cloudflare@1.4.0:
     optional: true
 
+  pg-cloudflare@1.4.1:
+    optional: true
+
   pg-connection-string@2.14.0: {}
+
+  pg-connection-string@2.14.1: {}
 
   pg-connection-string@2.6.2: {}
 
@@ -17972,7 +17986,7 @@ snapshots:
       '@oclif/config': 1.18.17(supports-color@8.1.1)
       '@oclif/plugin-help': 3.3.1(supports-color@8.1.1)
       cli-ux: 5.6.7(@oclif/config@1.18.17(supports-color@8.1.1))
-      pg: 8.23.0
+      pg: 8.23.1
       tslib: 1.14.1
     transitivePeerDependencies:
       - pg-native
@@ -17988,11 +18002,13 @@ snapshots:
     dependencies:
       pg: 8.20.0
 
-  pg-pool@3.14.0(pg@8.23.0):
+  pg-pool@3.14.0(pg@8.23.1):
     dependencies:
-      pg: 8.23.0
+      pg: 8.23.1
 
   pg-protocol@1.16.0: {}
+
+  pg-protocol@1.16.1: {}
 
   pg-types@2.2.0:
     dependencies:
@@ -18022,15 +18038,15 @@ snapshots:
     optionalDependencies:
       pg-cloudflare: 1.4.0
 
-  pg@8.23.0:
+  pg@8.23.1:
     dependencies:
-      pg-connection-string: 2.14.0
-      pg-pool: 3.14.0(pg@8.23.0)
-      pg-protocol: 1.16.0
+      pg-connection-string: 2.14.1
+      pg-pool: 3.14.0(pg@8.23.1)
+      pg-protocol: 1.16.1
       pg-types: 2.2.0
       pgpass: 1.0.5
     optionalDependencies:
-      pg-cloudflare: 1.4.0
+      pg-cloudflare: 1.4.1
 
   pgpass@1.0.5:
     dependencies:
