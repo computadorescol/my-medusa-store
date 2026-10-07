@@ -1,3 +1,4 @@
+
 import { Metadata } from "next"
 
 import { listCartOptions, retrieveCart } from "@lib/data/cart"
@@ -9,8 +10,11 @@ import Footer from "@modules/layout/templates/footer"
 import Nav from "@modules/layout/templates/nav"
 import FreeShippingPriceNudge from "@modules/shipping/components/free-shipping-price-nudge"
 
+export const dynamic = 'force-dynamic'
+export const revalidate = 0 
+
 export const metadata: Metadata = {
-  metadataBase: new URL(getBaseURL()),
+  metadataBase: new URL(getBaseURL()).toString(),
 }
 
 export default async function PageLayout(props: { children: React.ReactNode }) {
@@ -18,10 +22,16 @@ export default async function PageLayout(props: { children: React.ReactNode }) {
   const cart = await retrieveCart()
   let shippingOptions: StoreCartShippingOption[] = []
 
+  try {
+    customer = await retrieveCustomer()
+    cart = await retrieveCart()
   if (cart) {
     const { shipping_options } = await listCartOptions()
 
     shippingOptions = shipping_options
+  }
+  } catch (error) {
+    console.error("Error loading layout data:", error)
   }
 
   return (
