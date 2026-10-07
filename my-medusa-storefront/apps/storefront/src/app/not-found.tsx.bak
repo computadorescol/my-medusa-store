@@ -18,7 +18,7 @@ export default function NotFound() {
         My friend, The page you tried to access does not exist .Try again.
       </p>
       <Link className="flex gap-x-1 items-center group" href="/">
-        <span className="text-ui-fg-interactive">Go to frontpage and check</span>
+        <span className="text-ui-fg-interactive"> Carlos, Go to frontpage and check</span>
         <ArrowUpRightMini
           className="group-hover:rotate-45 ease-in-out duration-150"
           color="var(--fg-interactive)"

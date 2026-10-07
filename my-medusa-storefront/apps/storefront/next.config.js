@@ -15,6 +15,10 @@ const S3_PATHNAME = process.env.MEDUSA_CLOUD_S3_PATHNAME
 const nextConfig = {
   reactStrictMode: true,
   output:"standalone",
+  experimental: {
+    // Deshabilitar la generación estática de la página 404
+    missingSuspenseWithCSRBailout: false,
+  },
       logging: {
     fetches: {
       fullUrl: true,
