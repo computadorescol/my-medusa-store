@@ -4,9 +4,9 @@ import "../styles/globals.css"
 
 
 
-export const metadata: Metadata = {
-  metadataBase: new URL(getBaseURL()).toString(),,
-}
+//export const metadata: Metadata = {
+  //metadataBase: new URL(getBaseURL()).toString(),,
+//}
 
 export default function RootLayout(props: { children: React.ReactNode }) {
   return (
